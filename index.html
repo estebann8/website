@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<!--
+  PERSONAL WEBSITE STARTER — WHAT TO EDIT
+  ----------------------------------------
+  1. The <title> and meta description below.
+  2. Your name + role in the header and hero (search for "Maya Chen").
+  3. The intro paragraph in the hero.
+  4. The "About" section text.
+  5. The "Work" list — swap in your own projects, or delete items.
+  6. The "Contact" section — email + links.
+  Everything is plain HTML/CSS/JS, no build step. Open this file in a
+  browser to preview, or use the Live Server extension in VS Code.
+-->
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Maya Chen — Product designer</title>
+  <meta name="description" content="Personal site of Maya Chen, product designer." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Work+Sans:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <header class="site-header">
+    <a href="#top" class="wordmark">Maya Chen</a>
+    <button class="nav-toggle" aria-expanded="false" aria-controls="primary-nav">
+      <span></span><span></span><span></span>
+      <span class="sr-only">Menu</span>
+    </button>
+    <nav id="primary-nav" class="primary-nav">
+      <a href="#about">About</a>
+      <a href="#work">Work</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <main id="top">
+
+    <section class="hero">
+      <h1>Product designer,<br />occasional carpenter.</h1>
+      <p class="hero-intro">
+        I'm Maya — I design software for people who make things with their
+        hands, and spend evenings building furniture with mine. Based in
+        Portland, working with teams everywhere.
+      </p>
+      <div class="hero-links">
+        <a href="mailto:hello@example.com">hello@example.com</a>
+        <a href="https://github.com/example">GitHub</a>
+        <a href="https://linkedin.com/in/example">LinkedIn</a>
+      </div>
+    </section>
+
+    <section id="about" class="about">
+      <h2>About</h2>
+      <div class="about-body">
+        <p>
+          I've spent the last seven years designing tools for makers —
+          woodworkers, potters, small manufacturers — most recently leading
+          product design at a shop-management startup. I care about
+          software that respects the loud, dusty, hands-full reality of a
+          workshop, not just the quiet of an office.
+        </p>
+        <p>
+          Before that I trained as a cabinetmaker, which is where the
+          carpentry habit started. I still build most of my own furniture,
+          and I write occasionally about the overlap between craft and
+          software.
+        </p>
+      </div>
+    </section>
+
+    <section id="work" class="work">
+      <h2>Work</h2>
+      <ul class="work-list">
+        <li class="work-item">
+          <a href="#" class="work-title">Shopfloor — scheduling for small manufacturers</a>
+          <p>Led design on a scheduling tool for machine shops, replacing whiteboards and spreadsheets. Now used by 200+ shops.</p>
+        </li>
+        <li class="work-item">
+          <a href="#" class="work-title">Grainline — a pattern library for woodworkers</a>
+          <p>Designed and built a small web app for organizing furniture plans and cut lists. Side project, open source.</p>
+        </li>
+        <li class="work-item">
+          <a href="#" class="work-title">Notes on craft and software</a>
+          <p>An occasional newsletter about what furniture-making teaches me about designing tools.</p>
+        </li>
+      </ul>
+    </section>
+
+    <section id="contact" class="contact">
+      <h2>Get in touch</h2>
+      <p>
+        The best way to reach me is email. I'm slow on social media but I
+        do read everything.
+      </p>
+      <a class="contact-email" href="mailto:hello@example.com">hello@example.com</a>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <p>&copy; <span id="year"></span> Maya Chen.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

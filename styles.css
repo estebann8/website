@@ -1,0 +1,256 @@
+/* ---------------------------------------------------------------
+   DESIGN TOKENS — change these to make the site your own.
+   ----------------------------------------------------------------*/
+:root {
+  --paper: #F8F6F1;
+  --ink: #1F2321;
+  --ink-soft: #4B534F;
+  --teal: #1F6F5C;
+  --ochre: #C98A2C;
+  --rule: #DEDACE;
+
+  --font-display: "Fraunces", Georgia, serif;
+  --font-body: "Work Sans", -apple-system, Segoe UI, Helvetica, Arial, sans-serif;
+
+  --max-width: 40rem;
+  --gutter: 1.5rem;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --paper: #17191A;
+    --ink: #F2EFE9;
+    --ink-soft: #ADB3AC;
+    --rule: #33372F;
+  }
+}
+
+* { box-sizing: border-box; }
+
+html {
+  scroll-behavior: smooth;
+}
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  * { animation-duration: 0.001ms !important; animation-iteration-count: 1 !important; transition-duration: 0.001ms !important; }
+}
+
+body {
+  margin: 0;
+  background: var(--paper);
+  color: var(--ink);
+  font-family: var(--font-body);
+  font-size: 1.0625rem;
+  line-height: 1.6;
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px; height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+}
+
+a {
+  color: var(--teal);
+  text-decoration-color: var(--rule);
+  text-underline-offset: 3px;
+}
+a:hover, a:focus-visible {
+  text-decoration-color: currentColor;
+}
+:focus-visible {
+  outline: 2px solid var(--teal);
+  outline-offset: 3px;
+}
+
+/* ---------------------------------------------------------------
+   HEADER
+   ----------------------------------------------------------------*/
+.site-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 48rem;
+  margin: 0 auto;
+  padding: 1.5rem var(--gutter);
+}
+
+.wordmark {
+  font-family: var(--font-display);
+  font-size: 1.15rem;
+  font-weight: 600;
+  color: var(--ink);
+  text-decoration: none;
+}
+
+.primary-nav {
+  display: flex;
+  gap: 1.75rem;
+}
+.primary-nav a {
+  color: var(--ink-soft);
+  text-decoration: none;
+  font-size: 0.95rem;
+}
+.primary-nav a:hover { color: var(--ink); }
+
+.nav-toggle {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  gap: 4px;
+  width: 32px;
+  height: 32px;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+.nav-toggle span {
+  display: block;
+  height: 2px;
+  background: var(--ink);
+  border-radius: 1px;
+}
+
+@media (max-width: 36rem) {
+  .nav-toggle { display: flex; }
+  .primary-nav {
+    position: absolute;
+    top: 4.25rem;
+    right: var(--gutter);
+    left: var(--gutter);
+    flex-direction: column;
+    gap: 0.25rem;
+    background: var(--paper);
+    border: 1px solid var(--rule);
+    border-radius: 8px;
+    padding: 0.5rem;
+    display: none;
+  }
+  .primary-nav.open { display: flex; }
+  .primary-nav a { padding: 0.6rem 0.75rem; }
+}
+
+/* ---------------------------------------------------------------
+   SECTIONS — shared rhythm
+   ----------------------------------------------------------------*/
+main {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 var(--gutter);
+}
+
+section {
+  padding: 3.5rem 0;
+  border-top: 1px solid var(--rule);
+}
+.hero { border-top: none; padding-top: 2.5rem; }
+
+h2 {
+  font-family: var(--font-display);
+  font-weight: 500;
+  font-size: 1.5rem;
+  margin: 0 0 1.25rem;
+}
+
+/* ---------------------------------------------------------------
+   HERO
+   ----------------------------------------------------------------*/
+.hero h1 {
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: clamp(2.2rem, 5vw, 3.1rem);
+  line-height: 1.12;
+  letter-spacing: -0.01em;
+  margin: 0 0 1.25rem;
+}
+
+.hero-intro {
+  color: var(--ink-soft);
+  font-size: 1.1rem;
+  max-width: 34rem;
+  margin: 0 0 1.75rem;
+}
+
+.hero-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem 1.25rem;
+}
+.hero-links a {
+  text-decoration: none;
+  font-size: 0.95rem;
+  border-bottom: 1px solid var(--rule);
+  padding-bottom: 2px;
+}
+.hero-links a:hover { border-color: var(--teal); }
+
+/* ---------------------------------------------------------------
+   ABOUT
+   ----------------------------------------------------------------*/
+.about-body p {
+  color: var(--ink-soft);
+  margin: 0 0 1rem;
+}
+.about-body p:last-child { margin-bottom: 0; }
+
+/* ---------------------------------------------------------------
+   WORK
+   ----------------------------------------------------------------*/
+.work-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.work-item {
+  padding: 1.5rem 0;
+  border-top: 1px solid var(--rule);
+}
+.work-item:first-child { border-top: none; padding-top: 0; }
+
+.work-title {
+  display: inline-block;
+  font-family: var(--font-display);
+  font-size: 1.15rem;
+  font-weight: 500;
+  color: var(--ink);
+  text-decoration: none;
+  border-bottom: 2px solid transparent;
+  margin-bottom: 0.4rem;
+}
+.work-title:hover {
+  border-bottom-color: var(--ochre);
+}
+
+.work-item p {
+  color: var(--ink-soft);
+  margin: 0;
+  max-width: 36rem;
+}
+
+/* ---------------------------------------------------------------
+   CONTACT
+   ----------------------------------------------------------------*/
+.contact p {
+  color: var(--ink-soft);
+  max-width: 30rem;
+  margin: 0 0 1.25rem;
+}
+.contact-email {
+  font-family: var(--font-display);
+  font-size: 1.4rem;
+  text-decoration: none;
+  border-bottom: 2px solid var(--ochre);
+}
+
+/* ---------------------------------------------------------------
+   FOOTER
+   ----------------------------------------------------------------*/
+.site-footer {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 2rem var(--gutter) 3rem;
+  color: var(--ink-soft);
+  font-size: 0.85rem;
+}
