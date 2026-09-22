@@ -1,31 +1,30 @@
 <!DOCTYPE html>
 <!--
-  PERSONAL WEBSITE STARTER — WHAT TO EDIT
+  PERSONAL WEBSITE — WHAT TO EDIT
   ----------------------------------------
-  1. The <title> and meta description below.
-  2. Your name + role in the header and hero (search for "Maya Chen").
-  3. The intro paragraph in the hero.
-  4. The "About" section text.
-  5. The "Work" list — swap in your own projects, or delete items.
-  6. The "Contact" section — email + links.
-  Everything is plain HTML/CSS/JS, no build step. Open this file in a
-  browser to preview, or use the Live Server extension in VS Code.
+  Already personalized: name, header wordmark, hero tagline, About intro.
+  Still needs your input (search for these):
+  1. "example.com" — your real email, in two spots.
+  2. "your-github" / "your-linkedin" — your real profile URLs.
+  3. The About section's second paragraph — what you actually work on.
+  4. The Work section — three placeholder projects marked with [ ] —
+     replace title, link (href="#"), and description for each.
 -->
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Maya Chen — Product designer</title>
-  <meta name="description" content="Personal site of Maya Chen, product designer." />
+  <title>Esteban Salas Serrano</title>
+  <meta name="description" content="Personal site of Esteban Salas Serrano, Computer Engineering + Computer Science student at Northwestern University." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Work+Sans:wght@400;500&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&family=IBM+Plex+Sans:wght@400;500&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
 
   <header class="site-header">
-    <a href="#top" class="wordmark">Maya Chen</a>
+    <a href="#top" class="wordmark">esteban@nu ~ %</a>
     <button class="nav-toggle" aria-expanded="false" aria-controls="primary-nav">
       <span></span><span></span><span></span>
       <span class="sr-only">Menu</span>
@@ -40,16 +39,17 @@
   <main id="top">
 
     <section class="hero">
-      <h1>Product designer,<br />occasional carpenter.</h1>
+      <p class="eyebrow">// computer engineering + computer science, northwestern university</p>
+      <h1>Esteban Salas Serrano<span class="cursor" aria-hidden="true"></span></h1>
       <p class="hero-intro">
-        I'm Maya — I design software for people who make things with their
-        hands, and spend evenings building furniture with mine. Based in
-        Portland, working with teams everywhere.
+        I like working across the stack — close enough to the hardware to
+        care about what the compiler is doing, and comfortable enough on
+        top of it to ship a full application. Based in Evanston, IL.
       </p>
       <div class="hero-links">
-        <a href="mailto:hello@example.com">hello@example.com</a>
-        <a href="https://github.com/example">GitHub</a>
-        <a href="https://linkedin.com/in/example">LinkedIn</a>
+        <a href="mailto:esteban@example.com">esteban@example.com</a>
+        <a href="https://github.com/your-github">GitHub</a>
+        <a href="https://linkedin.com/in/your-linkedin">LinkedIn</a>
       </div>
     </section>
 
@@ -57,17 +57,16 @@
       <h2>About</h2>
       <div class="about-body">
         <p>
-          I've spent the last seven years designing tools for makers —
-          woodworkers, potters, small manufacturers — most recently leading
-          product design at a shop-management startup. I care about
-          software that respects the loud, dusty, hands-full reality of a
-          workshop, not just the quiet of an office.
+          I'm a Computer Engineering and Computer Science student at
+          Northwestern University. I'm drawn to systems-level problems —
+          the kind where understanding the hardware underneath changes how
+          you write the code on top of it.
         </p>
         <p>
-          Before that I trained as a cabinetmaker, which is where the
-          carpentry habit started. I still build most of my own furniture,
-          and I write occasionally about the overlap between craft and
-          software.
+          Outside of coursework, I'm usually [replace this — building side
+          projects, contributing to open source, part of a club or lab,
+          etc.]. I'm always happy to talk shop about embedded systems,
+          software architecture, or anything in between.
         </p>
       </div>
     </section>
@@ -76,16 +75,16 @@
       <h2>Work</h2>
       <ul class="work-list">
         <li class="work-item">
-          <a href="#" class="work-title">Shopfloor — scheduling for small manufacturers</a>
-          <p>Led design on a scheduling tool for machine shops, replacing whiteboards and spreadsheets. Now used by 200+ shops.</p>
+          <a href="#" class="work-title">[Project one]</a>
+          <p>[One or two sentences: what it does, what you built it with, and why it mattered.]</p>
         </li>
         <li class="work-item">
-          <a href="#" class="work-title">Grainline — a pattern library for woodworkers</a>
-          <p>Designed and built a small web app for organizing furniture plans and cut lists. Side project, open source.</p>
+          <a href="#" class="work-title">[Project two]</a>
+          <p>[One or two sentences describing this project.]</p>
         </li>
         <li class="work-item">
-          <a href="#" class="work-title">Notes on craft and software</a>
-          <p>An occasional newsletter about what furniture-making teaches me about designing tools.</p>
+          <a href="#" class="work-title">[Project three]</a>
+          <p>[One or two sentences describing this project.]</p>
         </li>
       </ul>
     </section>
@@ -93,16 +92,16 @@
     <section id="contact" class="contact">
       <h2>Get in touch</h2>
       <p>
-        The best way to reach me is email. I'm slow on social media but I
-        do read everything.
+        The best way to reach me is email — I'm slow on social media but I
+        read everything.
       </p>
-      <a class="contact-email" href="mailto:hello@example.com">hello@example.com</a>
+      <a class="contact-email" href="mailto:esteban@example.com">esteban@example.com</a>
     </section>
 
   </main>
 
   <footer class="site-footer">
-    <p>&copy; <span id="year"></span> Maya Chen.</p>
+    <p>&copy; <span id="year"></span> Esteban Salas Serrano.</p>
   </footer>
 
   <script src="script.js"></script>
